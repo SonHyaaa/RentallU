@@ -1,0 +1,264 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7ff;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #1e7e34;
+  --secondary-color: #f8f9fa;
+  --accent-color: #d5f62e;
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex-shrink: 0;
+}
+
+/*Для видео */
+.filter-blur {
+    filter: blur(5px);
+    transform: scale(1.05); /* Убирает черные края от blur */
+  }
+  
+  .object-fit-cover {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+
+  /* Стили для видео-баннера */
+.lending {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.lending video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.filter-blur {
+  filter: blur(5px);
+  transform: scale(1.05);
+}
+
+/* Затемнение фона */
+.lending .bg-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.lending .container {
+  height: 100%;
+}
+
+/* Контент поверх видео */
+.lending .text-center {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+  /* Стили для кнопки поиска и поиск */
+.btn.search_lupa {
+    background-color: #23cd4b; /* Зеленый цвет, как у Bootstrap success */
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn.search_lupa:hover {
+    background-color: #218838; /* Темнее при наведении */
+    transform: scale(1.05);
+  }
+  
+  .btn.search_lupa:active {
+    background-color: #1e7e34; /* Еще темнее при нажатии */
+    transform: scale(0.95);
+  }
+
+  .main_search {
+    width: 300px;
+  }
+
+
+/* Карточки информация о нас */
+.section-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.feature-card {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-list li:before {
+    content: "•";
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.btn-feature {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-feature:hover {
+    background-color: #21cd88;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+    margin: 3rem 0;
+    opacity: 0.2;
+}
+
+  /*Адаптивность*/
+  @media (max-width: 768px) {
+    .lending {
+      height: 400px !important;
+    }
+    .display-3 {
+      font-size: 2.5rem !important;
+    }
+    .fs-4 {
+      font-size: 1.25rem !important;
+    }
+
+    .lending {
+      height: 70vh; /* На мобильных делаем немного меньше */
+      min-height: 500px;
+    }
+  
+    .lending h1 {
+        font-size: 2.5rem !important;
+    }
+  
+    .lending p {
+        font-size: 1.25rem !important;
+    }
+  }
+    
+@media (max-width: 992px) {
+  .carousel-item {
+      min-width: calc(100% / 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+      min-width: calc(100% / 2);
+  }
+
+  .lending {
+    height: 70vh; /* На мобильных делаем немного меньше */
+    min-height: 500px;
+}
+
+  .lending h1 {
+      font-size: 2.5rem !important;
+  }
+
+  .lending p {
+      font-size: 1.25rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+      min-width: 100%;
+  }
+  
+  .carousel-btn {
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .lending {
+      height: 60vh;
+      min-height: 400px;
+  }
+  
+  .lending h1 {
+      font-size: 2rem !important;
+  }
+  
+  .lending .btn-lg {
+      padding: 0.5rem 1.5rem !important;
+      font-size: 1rem !important;
+  }
+}
