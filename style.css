@@ -193,9 +193,9 @@ header {
 
 .divider {
     height: 2px;
-    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+    
     margin: 3rem 0;
-    opacity: 0.2;
+    
 }
 
 /*Подвал*/
@@ -235,6 +235,120 @@ header {
         }
 
 
+
+ 
+
+         .slider-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .slider-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+        
+        .slider-header {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .slider-wrapper {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 0 0 calc(33.333% - 20px);
+            min-width: calc(33.333% - 20px);
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0d6efd;
+            margin: 15px 0;
+        }
+        
+        .product-title {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        
+        .slider-arrows {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .slider-arrow {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(13, 110, 253, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+            pointer-events: all;
+        }
+        
+        .slider-arrow:hover {
+            background-color: rgba(13, 110, 253, 1);
+        }
+        
+        .slider-arrow-prev {
+            margin-left: -25px;
+            z-index: 1;
+        }
+        
+        .slider-arrow-next {
+            margin-right: 25px;
+        }
+        
+        
+        
   /*Адаптивность*/
   @media (max-width: 768px) {
     .lending {
@@ -345,3 +459,47 @@ header {
     width: 120px;
   }
 }
+
+/* Ебаная карусель*/
+
+@media (max-width: 992px) {
+            .product-card {
+                flex: 0 0 calc(50% - 20px);
+                min-width: calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .slider-container {
+                padding: 0 30px;
+            }
+            
+            .slider-section {
+                padding: 40px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .product-card {
+                flex: 0 0 calc(100% - 20px);
+                min-width: calc(100% - 20px);
+            }
+            
+            .slider-container {
+                padding: 0 20px;
+            }
+            
+            .slider-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            
+            .slider-arrow-prev {
+                margin-left: -15px;
+            }
+            
+            .slider-arrow-next {
+                margin-right: -15px;
+            }
+        }
