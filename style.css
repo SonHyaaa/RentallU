@@ -113,6 +113,9 @@ header {
 
 
 /* Карточки информация о нас */
+.card_group {
+  justify-content: center;
+}
 .section-title {
     color: var(--primary-color);
     font-weight: 700;
