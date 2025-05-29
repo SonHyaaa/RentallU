@@ -48,8 +48,9 @@ header {
 
   /* Стили для видео-баннера */
 .lending {
-  flex-grow: 1;
   position: relative;
+  height: 80vh;
+  min-height: 600px;
   overflow: hidden;
 }
 
@@ -197,6 +198,13 @@ header {
     margin: 3rem 0;
     
 }
+/*кнопка войти */
+
+.btn-sign-in a{
+  text-decoration: none;
+  color: black;
+  
+}
 
 /*Подвал*/
 .footer-custom {
@@ -236,18 +244,17 @@ header {
 
 
 
- 
-
-         .slider-section {
+ .slider-section {
             padding: 60px 0;
             background-color: #f8f9fa;
+            position: relative;
         }
         
         .slider-container {
-            position: relative;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 50px;
+            position: relative;
+            padding: 0 60px; /* Увеличили отступы для стрелок */
         }
         
         .slider-header {
@@ -321,8 +328,9 @@ header {
         .slider-arrow {
             width: 50px;
             height: 50px;
+            border-radius: 5px;
             background-color: rgba(13, 110, 253, 0.7);
-            border-radius: 50%;
+            
             display: flex;
             align-items: center;
             justify-content: center;
@@ -332,22 +340,21 @@ header {
             border: none;
             transition: all 0.3s;
             pointer-events: all;
+            position: absolute;
         }
         
         .slider-arrow:hover {
-            background-color: rgba(13, 110, 253, 1);
+            background-color: var(--primary-color);
         }
         
         .slider-arrow-prev {
-            margin-left: -25px;
-            z-index: 1;
+            left: -10px;
+           
         }
         
         .slider-arrow-next {
-            margin-right: 25px;
+            right: 0;
         }
-        
-        
         
   /*Адаптивность*/
   @media (max-width: 768px) {
@@ -373,6 +380,7 @@ header {
     .lending p {
         font-size: 1.25rem !important;
     }
+    
   }
     
 @media (max-width: 992px) {
@@ -460,18 +468,21 @@ header {
   }
 }
 
-/* Ебаная карусель*/
-
-@media (max-width: 992px) {
+/* Адаптивность */
+        @media (max-width: 992px) {
             .product-card {
                 flex: 0 0 calc(50% - 20px);
                 min-width: calc(50% - 20px);
+            }
+            
+            .slider-container {
+                padding: 0 50px;
             }
         }
         
         @media (max-width: 768px) {
             .slider-container {
-                padding: 0 30px;
+                padding: 0 40px;
             }
             
             .slider-section {
@@ -486,7 +497,7 @@ header {
             }
             
             .slider-container {
-                padding: 0 20px;
+                padding: 0 30px;
             }
             
             .slider-arrow {
@@ -494,12 +505,5 @@ header {
                 height: 40px;
                 font-size: 20px;
             }
-            
-            .slider-arrow-prev {
-                margin-left: -15px;
-            }
-            
-            .slider-arrow-next {
-                margin-right: -15px;
-            }
         }
+    

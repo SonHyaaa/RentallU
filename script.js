@@ -5,33 +5,33 @@
         // Данные товаров
         const products = [
             {
-                image: "https://avatars.mds.yandex.net/i?id=6deff19a2722275b9a03f50d8bb4ff17325aa20d-9103674-images-thumbs&n=13",
-                price: "48θρ/сутки",
+                image: "https://via.placeholder.com/300x180?text=Антимаг",
+                price: "486p/cутки",
                 title: "Личность на антимага"
             },
             {
-                image: "https://avatars.mds.yandex.net/i?id=6deff19a2722275b9a03f50d8bb4ff17325aa20d-9103674-images-thumbs&n=13",
-                price: "48θρ/сутки",
+                image: "https://via.placeholder.com/300x180?text=Фантомка",
+                price: "486p/cутки",
                 title: "Аркана на фантомку"
             },
             {
-                image: "https://avatars.mds.yandex.net/i?id=6deff19a2722275b9a03f50d8bb4ff17325aa20d-9103674-images-thumbs&n=13",
-                price: "48θρ/сутки",
+                image: "https://via.placeholder.com/300x180?text=Цика",
+                price: "486p/cутки",
                 title: "Аркана на цику"
             },
             {
-                image: "https://avatars.mds.yandex.net/i?id=6deff19a2722275b9a03f50d8bb4ff17325aa20d-9103674-images-thumbs&n=13",
-                price: "50θρ/сутки",
+                image: "https://via.placeholder.com/300x180?text=PA",
+                price: "486p/cутки",
                 title: "Комплект на PA"
             },
             {
-                image: "https://avatars.mds.yandex.net/i?id=6deff19a2722275b9a03f50d8bb4ff17325aa20d-9103674-images-thumbs&n=13",
-                price: "45θρ/сутки",
+                image: "https://via.placeholder.com/300x180?text=Juggernaut",
+                price: "486p/cутки",
                 title: "Скин на Juggernaut"
             },
             {
-                image: "https://avatars.mds.yandex.net/i?id=6deff19a2722275b9a03f50d8bb4ff17325aa20d-9103674-images-thumbs&n=13",
-                price: "55θρ/сутки",
+                image: "https://via.placeholder.com/300x180?text=Rubick",
+                price: "486p/cутки",
                 title: "Аркана на Rubick"
             }
         ];

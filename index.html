@@ -9,76 +9,74 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
-  <!-- Главный контейнер с фиксированной высотой экрана -->
-  <div class="container main-container">
+  <!-- Убрал фиксированную высоту главного контейнера -->
+  <div class="container-fluid p-0">
     <!-- Хэдер -->
-    <!-- Хэдер -->
-<header class="p-3 bg-white sticky-top">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light p-0">
-      <!-- Логотип и кнопка бургер-меню -->
-      <a class="navbar-brand me-4" href="#">
-        <img src="logo.png" width="160px" alt="Логотип">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
-              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <header class="p-3 bg-white sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+          <!-- Логотип и кнопка бургер-меню -->
+          <a class="navbar-brand me-4" href="#">
+            <img src="logo.png" width="160px" alt="Логотип">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+                  aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-      <!-- Основное меню -->
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link px-3 text-dark fs-5" href="#">Категории</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3 text-dark fs-5" href="#">Избранное</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3 text-dark fs-5" href="#">О нас</a>
-          </li>
-        </ul>
+          <!-- Основное меню -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link px-3 text-dark fs-5" href="#">Категории</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3 text-dark fs-5" href="#">Избранное</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3 text-dark fs-5" href="#">О нас</a>
+              </li>
+            </ul>
 
-        <!-- Поиск и кнопки авторизации -->
-        <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
-          <form class="me-3 main_search" role="search">
-            <div class="input-group">
-              <input type="search" class="form-control" placeholder="Поиск товаров..." aria-label="Search">
-              <button class="btn search_lupa" type="submit">
-                <i class="bi bi-search"></i>
-              </button>
+            <!-- Поиск и кнопки авторизации -->
+            <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+              <form class="me-3 main_search" role="search">
+                <div class="input-group">
+                  <input type="search" class="form-control" placeholder="Поиск товаров..." aria-label="Search">
+                  <button class="btn search_lupa" type="submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </form>
+              <div class="d-flex">
+                <button type="button" class="btn btn-sign-in btn-warning me-2"><a href="sign.html">Войти</a></button>
+                <button type="button" class="btn btn-warning">Регистрация</button>
+              </div>
             </div>
-          </form>
-          <div class="d-flex">
-            <button type="button" class="btn btn-outline-warning me-2">Войти</button>
-            <button type="button" class="btn btn-warning">Регистрация</button>
           </div>
-        </div>
+        </nav>
       </div>
-    </nav>
-  </div>
-</header>
+    </header>
 
-    <!-- Видео-блок -->
-    <div class="container lending">
-      <video autoplay muted loop class="filter-blur">
+    <!-- Видео-блок - теперь fluid -->
+    <div class="container-fluid p-0 lending">
+      <video autoplay muted loop class="filter-blur w-100">
         <source src="lending.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <div class="bg-dark opacity-50"></div>
-      <div class="container h-100">
-        <div class="d-flex flex-column justify-content-center align-items-center text-center text-white h-100">
+      <div class="bg-dark opacity-50 position-absolute w-100 h-100 top-0 start-0"></div>
+      <div class="container h-100 position-relative">
+        <div class="d-flex flex-column justify-content-center align-items-center text-center text-white h-100 py-5">
           <h1 class="display-3 fw-bold mb-4">У нас вы подберете снаряжение на ваш вкус</h1>
           <p class="fs-4 mb-5">Широкий ассортимент качественного снаряжения для любых целей</p>
           <a href="#" class="btn btn-warning btn-lg px-5 py-3">Выбрать снаряжение</a>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container">
+     <div class="container">
     <div class="row card_group">
-      <h1 class="section-title">Как использовать RentalU</h1>
+      <h1 class="section-title ">Как использовать RentalU</h1>
         
       <div class="row g-4">
           <!-- Карточка 1: Возьмите на время -->
@@ -143,83 +141,88 @@
     </div>
     </div>
   </div>
-<!-- Ебаная карусель-->
-  <section class="slider-section">
-        <div class="slider-container">
-            <h2 class="slider-header">Новые товары на сайте</h2>
             
-            <div class="slider-wrapper">
-                <!-- Стрелки как отдельный блок -->
-                <div class="slider-arrows">
-                    <button class="slider-arrow slider-arrow-prev" onclick="moveSlider(-1)">
-                        &lt;
-                    </button>
-                    <button class="slider-arrow slider-arrow-next" onclick="moveSlider(1)">
-                        &gt;
-                    </button>
-                </div>
-                
-                <!-- Трек слайдера -->
-                <div class="slider-track" id="sliderTrack">
-                    <!-- Карточки товаров будут добавлены через JavaScript -->
-                </div>
-            </div>
+               
+    <!-- Слайдер - теперь fluid -->
+    <section class="slider-section bg-light">
+      <div class="container-fluid">
+        <div class="container">
+          <h2 class="slider-header">Новые товары на сайте</h2>
+          
+          <div class="slider-wrapper">
+              <!-- Трек слайдера -->
+              <div class="slider-track" id="sliderTrack">
+                  <!-- Карточки товаров будут добавлены через JavaScript -->
+              </div>
+              
+              <!-- Стрелки как отдельный блок -->
+              <div class="slider-arrows">
+                  <button class="slider-arrow slider-arrow-prev" onclick="moveSlider(-1)">
+                      &lt;
+                  </button>
+                  <button class="slider-arrow slider-arrow-next" onclick="moveSlider(1)">
+                      &gt;
+                  </button>
+              </div>
+          </div>
         </div>
+      </div>
     </section>
 
-   <!-- Футер -->
+    <!-- Футер - теперь fluid -->
     <footer class="footer-custom">
+      <div class="container-fluid">
         <div class="container">
-            <div class="row">
-                <!-- Колонка 1 -->
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="brand-name">RENTALLU</div>
-                    <p>Сайт для аренды различных товаров и услуг</p>
-                </div>
-                
-                <!-- Колонка 2 -->
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <h4 class="footer-title">О компании</h4>
-                    <div class="footer-links">
-                        <a href="#">О нас</a>
-                        <a href="#">Контакты</a>
-                        <a href="#">Вопросы и ответы</a>
-                    </div>
-                     </div>
-                
-                <!-- Колонка 3 -->
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <h4 class="footer-title">Арендаторам</h4>
-                    <div class="footer-links">
-                        <a href="#">Как взять в аренду</a>
-                        <a href="#">Популярные товары</a>
-                        <a href="#">Акции и скидки</a>
-                    </div>
-                </div>
-                
-                <!-- Колонка 4 -->
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <h4 class="footer-title">Собственникам</h4>
-                    <div class="footer-links">
-                        <a href="#">Как сдать в аренду</a>
-                        <a href="#">Безопасность</a>
-                        <a href="#">Партнерская программа</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="footer-bottom">
-                        <p class="mb-0">© 2025 RENTALLU. Все права защищены.</p>
-                    </div>
-                </div>
-            </div>
+          <div class="row">
+              <!-- Колонка 1 -->
+              <div class="col-md-3 col-sm-6 mb-4">
+                  <div class="brand-name">RENTALLU</div>
+                  <p>Сайт для аренды различных товаров и услуг</p>
+              </div>
+              
+              <!-- Колонка 2 -->
+              <div class="col-md-3 col-sm-6 mb-4">
+                  <h4 class="footer-title">О компании</h4>
+                  <div class="footer-links">
+                      <a href="#">О нас</a>
+                      <a href="#">Контакты</a>
+                      <a href="#">Вопросы и ответы</a>
+                  </div>
+              </div>
+              
+              <!-- Колонка 3 -->
+              <div class="col-md-3 col-sm-6 mb-4">
+                  <h4 class="footer-title">Арендаторам</h4>
+                  <div class="footer-links">
+                      <a href="#">Как взять в аренду</a>
+                      <a href="#">Популярные товары</a>
+                      <a href="#">Акции и скидки</a>
+                  </div>
+              </div>
+              
+              <!-- Колонка 4 -->
+              <div class="col-md-3 col-sm-6 mb-4">
+                  <h4 class="footer-title">Собственникам</h4>
+                  <div class="footer-links">
+                      <a href="#">Как сдать в аренду</a>
+                      <a href="#">Безопасность</a>
+                      <a href="#">Партнерская программа</a>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12">
+                  <div class="footer-bottom">
+                      <p class="mb-0">© 2025 RENTALLU. Все права защищены.</p>
+                  </div>
+              </div>
+          </div>
         </div>
+      </div>
     </footer>
+  </div>
 
-    
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
-
 </html>
